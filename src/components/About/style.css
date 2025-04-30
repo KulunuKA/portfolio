@@ -1,0 +1,178 @@
+/* About Component Styles */
+.about-section {
+  position: relative;
+  padding: 5rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+}
+
+.ab-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.about-content {
+  opacity: 1;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937; 
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.text-content {
+  color: #1f2937; /* gray-800 */
+}
+
+.about-paragraph {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #4b5563; /* gray-600 */
+}
+
+.about-paragraph-last {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #4b5563; /* gray-600 */
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  color: #374151; /* gray-700 */
+}
+
+.tech-arrow {
+  color: #14b8a6; /* portfolio-teal */
+  margin-right: 0.5rem;
+}
+
+.primary-button {
+  display: inline-block;
+  background-color: #14b8a6; 
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.primary-button:hover {
+  background-color: #0d9488; /* darker teal */
+}
+
+.image-container {
+  position: relative;
+}
+
+.profile-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(20, 184, 166, 0.2); 
+  z-index: 20;
+  transition: opacity 0.3s ease;
+}
+
+.profile-image-wrapper:hover .image-overlay {
+  opacity: 0;
+}
+
+.image-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  z-index: 30;
+}
+
+.image-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.profile-image-wrapper:hover .image-content {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 184, 166, 0.3); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937; /* gray-800 */
+}
+
+.image-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid #14b8a6; 
+  z-index: 0;
+  transform: translate(1.25rem, 1.25rem);
+}
+
+/* Animation classes */
+.hidden-element {
+  opacity: 1;
+  transform: translateY(2rem);
+}
