@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
-import my_pic from '../../assets/my_pic.png'
-
+import my_pic from "../../assets/my_pic.png";
 
 const About = () => {
   return (
@@ -31,9 +30,8 @@ const About = () => {
                 {[
                   "JavaScript (ES6+)",
                   "React",
-                  "TypeScript",
                   "Next.js",
-                  "Tailwind CSS",
+                  "Spring Boot",
                   "Node.js",
                 ].map((tech, index) => (
                   <li key={tech} className="tech-item">

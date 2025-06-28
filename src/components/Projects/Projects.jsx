@@ -3,6 +3,7 @@ import { ExternalLink, Github, ArrowRight, Check } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import melo from "../../assets/melo.png";
 import chat_app from "../../assets/chat_app.png";
+import walkingSalon from "../../assets/walkingsalonau.com.png";
 import "./style.css";
 
 const Projects = () => {
@@ -28,48 +29,43 @@ const Projects = () => {
       demoLink: "https://www.melo.lk",
     },
     {
+      title: "Walking Salon",
+      description:
+        "A modern salon booking system where customers can browse services, schedule appointments within available hours, and salon admins can manage services, bookings, and operating times—all integrated with Firebase for real-time updates and scalable hosting.",
+      technologies: [
+        "React.js",
+        "Firebase (Firestore, Functions, Auth, Storage)",
+        "Node.js",
+        "Tailwind CSS",
+        "Ant Design",
+      ],
+      keyFeatures: [
+        "Service Browsing with Images and Details",
+        "Dynamic Booking Form with Time Slot Validation",
+        "Admin Dashboard for Services and Bookings",
+        "Opening Time Management",
+        "Email Notifications for Bookings",
+        "Responsive Mobile-First Design",
+        "Firebase Hosting and Cloud Functions",
+      ],
+      image: walkingSalon,
+      githubLink: "#",
+      demoLink: "https://walkingsalonau.com/",
+    },
+    {
       title: "Chat Application",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Firebase",
-        "Tailwind CSS",
-        "React DnD",
-      ],
+      technologies: ["React", "Firebase", "Tailwind CSS", "Node Js"],
       keyFeatures: [
-        "Real-time Updates", 
+        "Real-time Updates",
         "Drag-and-Drop Functionality",
         "Team Collaboration",
         "Task Assignment",
         "Progress Tracking",
-        "Notification System"
+        "Notification System",
       ],
       image: chat_app,
-      githubLink: "#",
-      demoLink: "#",
-    },
-    {
-      title: "Travel Journal App",
-      description:
-        "An interactive travel journal that allows users to document their trips with photos, notes, and locations on an interactive map.",
-      technologies: [
-        "Next.js",
-        "MongoDB",
-        "Mapbox API",
-        "Cloudinary",
-        "Tailwind CSS",
-      ],
-      keyFeatures: [
-        "Interactive Maps",
-        "Photo Gallery",
-        "Location Tagging",
-        "Trip Timeline",
-        "Offline Access",
-        "Social Sharing"
-      ],
-      image: "/placeholder.svg",
       githubLink: "#",
       demoLink: "#",
     },
@@ -135,7 +131,7 @@ const Projects = () => {
                 <div className="project-description-card">
                   <p className="project-description">{project.description}</p>
                 </div>
-                
+
                 {/* Redesigned Key Features Section */}
                 <div className="key-features-container">
                   <h4 className="features-heading">Key Features</h4>

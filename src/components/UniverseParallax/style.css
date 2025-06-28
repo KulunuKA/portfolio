@@ -1,0 +1,66 @@
+.advanced-parallax {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg-layer,
+.parallax-mid-layer,
+.parallax-fg-layer {
+  position: absolute;
+  height: 120vh; /* Extra height to allow for movement */
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.parallax-bg-layer {
+  z-index: 1;
+}
+
+.parallax-mid-layer {
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.parallax-fg-layer {
+  z-index: 3;
+  opacity: 0.9;
+}
+
+.title-container {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(97, 9, 9);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  width: 80%;
+  max-width: 800px;
+  will-change: transform, opacity;
+}
+
+.title-container h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.title-container p {
+  font-size: 1.8rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .title-container h1 {
+    font-size: 3rem;
+  }
+  
+  .title-container p {
+    font-size: 1.2rem;
+  }
+}
