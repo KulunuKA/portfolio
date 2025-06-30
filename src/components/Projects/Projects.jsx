@@ -1,5 +1,11 @@
-import React from "react";
-import { ExternalLink, Github, ArrowRight, Check } from "lucide-react";
+import React, { useState } from "react";
+import {
+  ExternalLink,
+  Github,
+  Check,
+  ArrowDown,
+  ArrowUp,
+} from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import melo from "../../assets/melo.png";
 import chat_app from "../../assets/chat_app.png";
@@ -11,6 +17,8 @@ const Projects = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
+  const [viewMore, setViewMore] = useState(false);
+  const [initialSlice, setInitialSlice] = useState(3);
 
   const projects = [
     {
@@ -79,7 +87,7 @@ const Projects = () => {
         </h2>
 
         <div className="projects-container">
-          {projects.map((project, index) => (
+          {projects.slice(0, initialSlice).map((project, index) => (
             <div
               key={project.title}
               className={`project-item ${inView ? "visible" : "hidden"}`}
@@ -183,10 +191,20 @@ const Projects = () => {
           className={`more-projects-container ${inView ? "visible" : "hidden"}`}
           style={{ animationDelay: "600ms" }}
         >
-          <a href="#" className="primary-button">
-            See More Projects
-            <ArrowRight className="arrow-icon" size={18} />
-          </a>
+          <p
+            onClick={() => {
+              viewMore ? setInitialSlice(2) : setInitialSlice(projects.length);
+              setViewMore(!viewMore);
+            }}
+            className="primary-button"
+          >
+            {viewMore ? "View Less Projects" : "View More Projects"}
+            {!viewMore ? (
+              <ArrowDown className="arrow-icon" size={18} />
+            ) : (
+              <ArrowUp className="arrow-icon" size={18} />
+            )}
+          </p>
         </div>
       </div>
     </section>

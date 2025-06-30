@@ -12,17 +12,17 @@ const About = () => {
           <div className="about-grid">
             <div className="text-content hidden-element">
               <p className="about-paragraph">
-                Hello! I'm John, a frontend developer passionate about creating
-                interactive digital experiences on the web. My journey in web
-                development started back in college when I first discovered HTML
-                and CSS.
+                Hi, I’m Kulunu — a full stack developer who loves creating
+                interactive and engaging web experiences. My journey started in
+                college with HTML and CSS, sparking a passion that has grown
+                ever since.
               </p>
               <p className="about-paragraph">
-                Fast-forward to today, and I've had the privilege of working at
-                various companies, from startups to large corporations. My main
-                focus these days is building accessible, inclusive products and
-                digital experiences.
+                Today, I’m focused on building accessible, inclusive products,
+                and I’ve enjoyed working with startups to bring digital ideas to
+                life.
               </p>
+
               <p className="about-paragraph-last">
                 Here are a few technologies I've been working with recently:
               </p>

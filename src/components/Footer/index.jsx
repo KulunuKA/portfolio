@@ -16,14 +16,11 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">
             <a href="#home" className="logo-link">
-              Portfolio<span className="logo-dot">.</span>
+              Kulunu<span className="logo-dot">.</span>
             </a>
           </div>
           
-          <p className="footer-credit">
-            Designed & Built with <Heart className="heart-icon" size={14} /> by  Kulunu Kasthuri
-          </p>
-          
+      
           <div className="back-top">
             <button 
               onClick={scrollToTop}

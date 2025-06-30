@@ -1,9 +1,14 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { useInView } from "react-intersection-observer";
 import {
-  Code, Database, Globe, Layout, Smartphone, GitBranch
-} from 'lucide-react';
-import './style.css';
+  Code,
+  Database,
+  Globe,
+  Layout,
+  Smartphone,
+  GitBranch,
+} from "lucide-react";
+import "./style.css";
 
 const Skills = () => {
   const { ref, inView } = useInView({
@@ -13,48 +18,71 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: "Frontend Development",
       icon: <Layout className="skill-icon" size={40} />,
-      skills: ['HTML5/CSS3', 'JavaScript (ES6+)', 'React.js', 'Ant Design']
+      skills: ["HTML5/CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "Ant Design"],
     },
     {
-      title: 'Backend Development',
+      title: "Backend Development",
       icon: <Database className="skill-icon" size={40} />,
-      skills: ['Node.js', 'Express', 'RESTful APIs', 'MongoDB', 'Firebase', 'SQL']
+      skills: [
+        "Node.js",
+        "Spring Boot",
+        "Express",
+        "RESTful APIs",
+        "MongoDB",
+        "Firebase",
+        "SQL",
+      ],
     },
     {
-      title: 'Mobile Development',
+      title: "Mobile Development",
       icon: <Smartphone className="skill-icon" size={40} />,
-      skills: ['React Native', 'Responsive Design', 'Progressive Web Apps', 'Flutter Basics']
+      skills: [
+        "React Native",
+        "Responsive Design",
+        "Progressive Web Apps",
+        "Flutter Basics",
+      ],
     },
     {
-      title: 'Code Quality',
+      title: "Code Quality",
       icon: <Code className="skill-icon" size={40} />,
-      skills: ['Clean Code', 'Testing (Jest)', 'Performance Optimization', 'Accessibility (a11y)']
+      skills: [
+        "Clean Code",
+        "Testing (Jest)",
+        "Performance Optimization",
+        "Accessibility (a11y)",
+      ],
     },
     {
-      title: 'Version Control',
+      title: "Version Control",
       icon: <GitBranch className="skill-icon" size={40} />,
-      skills: ['Git', 'GitHub', 'CI/CD Pipelines', 'Agile Workflow']
+      skills: ["Git", "GitHub", "Agile Workflow"],
     },
     {
-      title: 'Other Skills',
+      title: "Other Skills",
       icon: <Globe className="skill-icon" size={40} />,
-      skills: ['SEO Basics', 'Web Performance', 'Problem Solving', 'Team Collaboration']
-    }
+      skills: [
+        "SEO Basics",
+        "Web Performance",
+        "Problem Solving",
+        "Team Collaboration",
+      ],
+    },
   ];
 
   return (
     <section id="skills" ref={ref} className="skills-section">
       <div className="sk-section-container">
-        <h2 className={`section-heading ${inView ? 'visible' : 'hidden'}`}>
+        <h2 className={`section-heading ${inView ? "visible" : "hidden"}`}>
           My Skills
         </h2>
         <div className="skills-grid">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className={`skill-card ${inView ? 'visible' : 'hidden'}`}
+              className={`skill-card ${inView ? "visible" : "hidden"}`}
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
               {category.icon}
@@ -64,7 +92,11 @@ const Skills = () => {
                   <li
                     key={skill}
                     className="skill-item"
-                    style={{ animationDelay: `${(categoryIndex * 100) + (skillIndex * 50)}ms` }}
+                    style={{
+                      animationDelay: `${
+                        categoryIndex * 100 + skillIndex * 50
+                      }ms`,
+                    }}
                   >
                     <span className="skill-arrow">▹</span>
                     <span>{skill}</span>
