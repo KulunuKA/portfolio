@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import {
-  ExternalLink,
-  Github,
-  Check,
-  ArrowDown,
-  ArrowUp,
-} from "lucide-react";
+import { ExternalLink, Github, Check, ArrowDown, ArrowUp } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import melo from "../../assets/melo.png";
 import chat_app from "../../assets/chat_app.png";
 import walkingSalon from "../../assets/walkingsalonau.com.png";
+import fashionhub from "../../assets/fashionhub.png";
 import "./style.css";
 
 const Projects = () => {
@@ -61,6 +56,22 @@ const Projects = () => {
       demoLink: "https://walkingsalonau.com/",
     },
     {
+      title: "Fashion Hub",
+      description:
+        "Developed Fashion Hub, a modern e-commerce platform designed to elevate online fashion shopping experiences. Built with a robust React front-end and a Spring Boot backend, the application integrates Elasticsearch for lightning-fast product search and discovery. Fashion Hub offers seamless admin management for product operations, along with intuitive shopping cart functionality for users. The platform ensures high performance, scalability, and a visually appealing user interface.",
+      technologies: ["React", "Spring Boot", "MongoDB", "Elasticsearch"],
+      keyFeatures: [
+        "Admin Authentication & Product Management",
+        "High-performance Search with Elasticsearch",
+        "User Shopping Cart Functionality",
+        "Responsive and Modern UI",
+      ],
+      image: fashionhub,
+      githubLink: "https://github.com/KulunuKA/E-commerce-Website",
+      demoLink: "#",
+    },
+
+    {
       title: "Chat Application",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
@@ -74,7 +85,7 @@ const Projects = () => {
         "Notification System",
       ],
       image: chat_app,
-      githubLink: "#",
+      githubLink: "https://github.com/KulunuKA/Real-Time-Chat-Application",
       demoLink: "#",
     },
   ];
@@ -167,6 +178,7 @@ const Projects = () => {
                 <div className="project-links-small">
                   <a
                     href={project.githubLink}
+                    target="_blank"
                     className="project-icon-link"
                     aria-label="GitHub Repository"
                   >
